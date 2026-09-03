@@ -12,8 +12,8 @@
 </head>
 
 <body>
-    <header>
-        <nav class="navbar">
+    <header id="header">
+        <nav class="navbar" id="navbar">
             <div class="navbar-container">
                 <a class="navbar-title" href="index.html">JR</a>
                 <div class="navbar-link-container">
@@ -31,15 +31,17 @@
             <div class="hero-container">
                 <div class="hero-info">
                     <div class="hero-text">
-                        <p class="hero-title">Juan Rodriguez</p>
-                        <p class="hero-subtitle">Estudiante de Ingenieria de Sistemas</p>
+                        <p class="hero-title title">Juan Rodriguez</p>
+                        <p class="hero-subtitle subtitle">Estudiante de Ingenieria de Sistemas</p>
                     </div>
-                    <button>
-                        <span class="hero-button">
-                            <img src="assets/media/img/button_arrow.svg" alt="button_arrow">
-                            <a>Mas informacion</a>
-                        </span>
-                    </button>
+                    <a href="#about">
+                        <button>
+                            <span class="hero-button">
+                                <img src="assets/media/img/button_arrow.svg" alt="button_arrow">
+                                <span>Mas informacion</span>
+                            </span>
+                        </button>
+                    </a>
                 </div>
 
                 <img src="assets/media/img/tux.svg" alt="personal_image">
@@ -47,37 +49,146 @@
         </div>
 
         <div class="main-about" id="about">
+            <div class="about-title title">Acerca de mi</div>
+            <div class="about-text-container">
+                <p>
+                    Mi nombre es <strong>Juan Jose Rodriguez Prada.</strong> Soy un estudiante de Ingenieria de Sistemas
+                    en la
+                    <a href="https://www.unicauca.edu.co/" target="_blank" rel="noopener noreferrer"
+                        class="about-text-link">
+                        Universidad del Cauca.
+                    </a>
+                    Desde pequeño siempre estuve rodeado de tecnologia, computadoras y consolas de videojuegos,
+                    lo que desperto en mi la pasion por entender como funcionan los sistemas y todas
+                    las posibilidades que hay en este mundo.
+                </p>
+                <div class="skills">
+                    <a class="skills-title title">Habilidades</a>
+                    <div class="skills-icons">
+                        <div>
+                            <img src="assets/media/img/arduino.svg" alt="arduino logo" width="100">
+                            <a>Arduino</a>
+                        </div>
+                        <div>
+                            <img src="assets/media/img/c.svg" alt="c logo" width="100">
+                            <a>C</a>
+                        </div>
+                        <div>
+                            <img src="assets/media/img/cpp.svg" alt="c++ logo" width="100">
+                            <a>C++</a>
+                        </div>
+                        <div>
+                            <img src="assets/media/img/csharp.svg" alt="c# logo" width="100">
+                            <a>C#</a>
+                        </div>
+                        <div>
+                            <img src="assets/media/img/java.svg" alt="java logo" width="100">
+                            <a>Java</a>
+                        </div>
+                        <div>
+                            <img src="assets/media/img/html5.svg" alt="html5 logo" width="100">
+                            <a>HTML5</a>
+                        </div>
+                        <div>
+                            <img src="assets/media/img/godot.svg" alt="godot logo" width="100">
+                            <a>Godot</a>
+                        </div>
+                    </div>
+                </div>
 
+                <div class="projects-cards-container">
+                    <a class="title">Proyectos personales</a>
+                    <div class="projects-container">
+                        <div class="arduino-project project-card">
+                            <h3>Sistema de oficina</h3>
+                            <p>
+                                Implementacion de un sistema que busca monitorizar
+                                el ambiente de una sala, controlar el acceso de las puertas, crear y manejar perfiles de
+                                empleados, y la aparicion de alarmas por emergencias o intrusos. Basada en Arduino.
+                            </p>
+                            <a href="https://github.com/jot1x4k/arduino-arq-project" class="info-button" target="_blank"
+                                rel="noopener noreferrer">Mas informacion</a>
+                        </div>
+                        <div class="forms-project project-card">
+                            <h3>Billetera Virtual</h3>
+                            <p>
+                                Aplicacion de escritorio del Banco de los Andes. Una implementacion de una billetera
+                                virtual
+                                pensada en ser usada por los clientes de la entidad como herramienta para llevar a cabo
+                                operaciones financieras basicas. Basada en C#
+                            </p>
+                            <a href="https://github.com/jot1x4k/Billetera-Virtual" class="info-button" target="_blank"
+                                rel="noopener noreferrer">Mas informacion</a>
+                        </div>
+                        <div class="cine-project project-card">
+                            <h3>Cinemagic</h3>
+                            <p>
+                                Aplicacion de escritorio del Cinemagic. Una implementacion de un sistema para la gestion
+                                de
+                                un cine, con reserva de asientos, registro de peliculas y salas de cine, manejo de
+                                horarios
+                                y funciones disponibles. Basada en C#
+                            </p>
+                            <a href="https://github.com/jot1x4k/Forms-Cine" class="info-button" target="_blank"
+                                rel="noopener noreferrer">Mas informacion</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <div class="main-projects-container" id="projects">
-            <div class="projects-title-container">
-                <a>Proyectos destacados</a>
-                <p>Haz click en algun proyecto que te llame la atencion</p>
-            </div>
-            <div class="projects-cards-container">
-                <div class="project-card">Proyecto 1</div>
-                <div class="project-card">Proyecto 2</div>
-                <div class="project-card">Proyecto 3</div>
-                <div class="project-card">Proyecto 4</div>
-                <div class="project-card">Proyecto 5</div>
-                <div class="project-card">Proyecto 6</div>
+        <hr>
+
+        <div class="web-projects-container" id="projects">
+            <div class="web-projects-title title">Proyectos web</div>
+            <div class="web-projects-list">
+                <div class="web-project-item">
+                    <span class="subtitle">Mercado virtual con HTML/CSS/JS</span>
+                    <p class="text">El proyecto <strong>"Tienda de Productos"</strong>
+                        es una simulacion de una aplicacion web donde los elementos en pantalla
+                        reaccionan en tiempo real a las acciones del usuario, sin necesidad de 
+                        recargar la pagina. La generacion del contenido es dinamica, mediante JavaScript
+                    </p>
+                </div>
+                <div class="web-project-item">
+                    <span class="subtitle">W.I.P</span>
+                    <p class="text">Un nuevo proyecto estara dispobile proximamente</p>
+                </div>
+                <div class="web-project-item">
+                    <span class="subtitle">W.I.P</span>
+                    <p class="text">Un nuevo proyecto estara dispobile proximamente</p>
+                </div>
             </div>
         </div>
 
-        <div class="main-contact" id="contact">
-            <a>Mas informacion</a>
-            <div class="contact-info">
-                <div class="contact-info-item">Item de informacion</div>
-                <div class="contact-info-item">Item de informacion</div>
-                <div class="contact-info-item">Item de informacion</div>
+        <div class="contact" id="contact">
+            <div class="contact-title">
+                <h2>Contacto</h2>
+            </div>
+            <div class="contact-list">
+                <div class="contact-method">
+                    <img src="assets/media/img/mail.svg" alt="Email">
+                    <a href="mailto:juanroprada@gmail.com" target="_blank" rel="noopener noreferrer">E-mail</a>
+                </div>
+                <div class="contact-method">
+                    <img src="assets/media/img/github.svg" alt="GitHub">
+                    <a href="https://github.com/jot1x4k" target="_blank" rel="noopener noreferrer">GitHub</a>
+                </div>
+                <div class="contact-method">
+                    <img src="assets/media/img/discord.svg" alt="Discord">
+                    <a href="https://discord.com/" target="_blank" rel="noopener noreferrer">Discord</a>
+                </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <a>Footer</a>
+        <a class="footer-logo">JR</a>
+        <a>~</a>
+        <a>Copyright © 2026</a>
     </footer>
 </body>
+
+<script src="assets/script.js"></script>
 
 </html>

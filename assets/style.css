@@ -1,15 +1,9 @@
 * {
-    outline: 1px solid red;
-}
-
-html 
-{
-    scroll-behavior: smooth;
+    /* outline: 1px solid red;s */
 }
 
 html,
 body {
-    height: 100%;
     padding: 0;
     margin: 0;
     width: 100%;
@@ -17,6 +11,23 @@ body {
     overflow-wrap: break-word;
     min-height: 100vh;
 }
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    overflow-y: visible;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 100;transition: top 0.3s;
+}
+
 
 img {
     max-width: 100%;
@@ -26,9 +37,27 @@ img {
 header {
     position: sticky;
     top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
     box-shadow: 0 2px 2px #02070c2f;
     border-radius: 0 0 1.5rem 1.5rem;
+}
+
+.title {
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 4rem);
+}
+
+.subtitle {
+    font-weight: 300;
+    font-size: clamp(1rem, 1vw, 1rem);
+}
+
+.text {
+    font-weight: 0;
+    font-size: clamp(0.75rem, 1vw, 0.75rem);
+    color: #1e1e1e;
 }
 
 .navbar {
@@ -122,6 +151,7 @@ img {
     background-size: cover;
     text-align: center;
     padding: 3rem;
+    padding-bottom: 30%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -140,8 +170,6 @@ img {
 
 .hero-title {
     max-width: 100%;
-    font-weight: 700;
-    font-size: clamp(2rem, 5vw, 4rem);
     color: #ffffff;
     padding: 1rem;
     margin: 0;
@@ -151,8 +179,6 @@ img {
 
 .hero-subtitle {
     color: #ffffff;
-    font-weight: 500;
-    font-size: clamp(1rem, 1vw, 1rem);
     padding: 1rem;
     border-radius: .5rem;
     background-color: #3b3b3b;
@@ -178,6 +204,11 @@ button .hero-button img {
     width: 2vh;
 }
 
+button img {
+    height: 2vh;
+    width: 2vh;
+}
+
 .hero-button:hover {
     transform: translateY(-8px);
 }
@@ -191,4 +222,227 @@ button .hero-button img {
     width: auto;
     max-width: 100%;
     object-fit: contain;
+}
+
+.main-about {
+    justify-items: center;
+    text-align: justify;
+    padding: 1rem;
+}
+
+.main-about a {
+    text-decoration: none;
+}
+
+.skills
+{
+    text-align: center;
+    margin: 0;
+    padding: 2rem;
+    color: #ffffff;
+    background-color: #202020;
+    border-radius: 1rem;
+}
+
+.skills-title, .projects-title
+{
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.skills-icons
+{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.skills-icons img
+{
+    background-color: #3b3b3b;
+    border-radius: 10px;
+    padding: 10px;
+    height: 100px;
+    width: auto;
+    margin: 0 auto;
+}
+
+.skills-icons div
+{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px;
+    gap: 10px;
+}
+
+.skills-icons a
+{
+    border-radius: 5px;
+    background-color: #3b3b3b;
+    color: #cfcfcf;
+    padding: 5px;
+}
+
+
+.projects-cards-container
+{
+    background-color: white;
+    color: #2b2b2b;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.projects-container
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.project-card
+{
+    flex: 1 1 300px;
+    border-radius: 10px;
+    color: #ffffff;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    transition: all 0.2s ease;
+    align-items: center;
+}
+
+.project-card:hover {
+    scale: 0.95;
+}
+
+.project-card p {
+    flex-grow: 1;
+}
+
+.project-card h3
+{
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.info-button
+{
+    max-width: fit-content;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    text-decoration: none;
+    margin-top: 1rem;
+    display: inline-block;
+}
+
+.arduino-project { background-color: #00979c; }
+.arduino-project .info-button { background-color: #00797d; outline: 2px solid #015a5d; }
+
+.forms-project { background-color: #4d58d8; }
+.forms-project .info-button { background-color: #3640a8; outline: 2px solid #282f7c; }
+
+.cine-project { background-color: #58009c; }
+.cine-project .info-button { background-color: #440078; outline: 2px solid #2d004f; }
+
+.web-projects-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.web-projects-list {
+    gap: 10px;
+    padding: 1rem;
+}
+
+.web-projects-item {
+    gap: 10px;
+}
+
+#contact
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    background-color: #2b2b2b;
+    color: #ffffff;
+    gap: 2rem;
+}
+
+.contact-list
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.contact-method
+{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.contact-method a
+{
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #353535;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+    transition: all 0.2s ease;
+}
+
+.contact-method a:hover {
+    scale: 0.95;
+}
+
+.contact-list img 
+{
+    height: 80px;
+    filter: invert();
+    margin-bottom: 10px;
+}
+
+footer 
+{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    background-color: #353535;
+    gap: 20px;
+}
+
+.footer-logo {
+    font-family: "Vampiro One", system-ui;
+}
+
+footer a
+{
+    
+    font-family: "Cal Sans", sans-serif;
+    color: white;
+    font-size: 15px;
+    font-weight: 800;
+}
+
+hr {
+    background-color: #2b2b2b;
+    height: 1vh;
+    border: none;
+    margin-bottom: 3rem;
 }
