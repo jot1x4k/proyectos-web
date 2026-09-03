@@ -1,20 +1,32 @@
 * {
-    outline: 1px solid red;
+    /* outline: 1px solid red; */
 }
 
+html,
 body {
+    height: 100%;
     padding: 0;
     margin: 0;
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 header {
-
+    position: sticky;
+    top: 0;
+    box-shadow: 0 2px 2px #02070c2f;
+    border-radius: 0 0 1.5rem 1.5rem;
 }
 
-.navbar
-{
-    color: #dcdcdc;
-    background-color: #071c2e;
+.navbar {
+    color: #9ca397;
+    background-color: #02070c;
 }
 
 .navbar-container {
@@ -27,8 +39,15 @@ header {
 
 .navbar-title {
     font-family: "Vampiro One", system-ui;
+    text-decoration: none;
+    color: inherit;
     font-size: 2rem;
     font-weight: 600;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar-title:hover {
+    transform: scale(1.2);
 }
 
 .navbar-link-container {
@@ -39,8 +58,128 @@ header {
     font-family: "Commissioner", sans-serif;
     font-weight: 500;
     text-decoration: none;
-    color: #dcdcdc;
+    color: #9ca397;
     margin-left: 1rem;
+    position: relative;
+    transition: all 0.4s ease;
 }
 
+.navbar-link:hover {
+    color: #ffffff;
+}
 
+.navbar-link::after {
+    content: '';
+    height: 1px;
+    width: 100%;
+    background-color: #9ca397;
+    position: absolute; 
+    left: 0;
+    bottom: 0;
+    opacity: 0;
+    transition: all 0.4s;
+}
+
+.navbar-link:hover::after {
+    opacity: 1;
+}
+
+main {
+    font-family: "Commissioner", sans-serif;
+}
+
+button {
+    font-size: .75rem;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    max-width: 10rem;
+    background-color: #ffffff68;
+    border-radius: .75rem;
+    padding: .25rem;
+}
+
+img {
+    max-height: 100%;
+}
+
+.hero-container {
+    background-image: linear-gradient(#02070c, #02070c00), url("/assets/media/img/milky_way.jpg");
+    min-width: 80vh;
+    height: auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    padding: 3rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    gap: 1rem;
+}
+
+.hero-info {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-items: center;
+    padding: 1rem;
+}
+
+.hero-title {
+    max-width: 100%;
+    font-weight: 700;
+    font-size: clamp(2rem, 5vw, 4rem);
+    color: #ffffff;
+    padding: 1rem;
+    margin: 0;
+    border-radius: .5rem;
+    background-color: #202020;
+}
+
+.hero-subtitle {
+    color: #ffffff;
+    font-weight: 500;
+    font-size: clamp(1rem, 1vw, 1rem);
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: #3b3b3b;
+}
+
+.hero-button {
+    display: flex;
+    align-items: center;
+    border: 2px solid #000000;
+    border-radius: 0.5rem;
+    padding: .5rem;
+    background: #ffffff;
+    color: #000000;
+    gap: 5px;
+    scale: 1;
+    transform: translateY(-5px);
+    transition: scale 0.1s ease;
+    transition: transform 0.1s ease;
+}
+
+button .hero-button img {
+    height: 2vh;
+    width: 2vh;
+}
+
+.hero-button:hover {
+    transform: translateY(-8px);
+}
+
+.hero-button:active {
+    transform: translateY(-5px) scale(0.95);
+}
+
+.main-hero img {
+    height: 50vh;
+    width: auto;
+    max-width: 100%;
+    object-fit: contain;
+}
