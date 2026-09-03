@@ -1,5 +1,5 @@
 * {
-    /* outline: 1px solid red;s */
+    /* outline: 1px solid red; */
 }
 
 html,
@@ -17,7 +17,6 @@ html {
 }
 
 body {
-    min-height: 100vh;
     overflow-x: hidden;
     overflow-y: visible;
 }
@@ -50,13 +49,13 @@ header {
 }
 
 .subtitle {
-    font-weight: 300;
-    font-size: clamp(1rem, 1vw, 1rem);
+    font-weight: 500;
+    font-size: clamp(1.25rem, 1vw, 1rem);
 }
 
 .text {
     font-weight: 0;
-    font-size: clamp(0.75rem, 1vw, 0.75rem);
+    font-size: clamp(1rem, 1vw, 0.75rem);
     color: #1e1e1e;
 }
 
@@ -143,8 +142,7 @@ img {
 }
 
 .hero-container {
-    background-image: linear-gradient(#02070c, #02070c00), url("https://images.pexels.com/photos/13179963/pexels-photo-13179963.jpeg");
-    min-width: 80vh;
+    background-image: linear-gradient(#02070c, #02070c00), url("https://images.pexels.com/photos/13179963/pexels-photo-13179963.jpeg"); 
     height: auto;
     background-position: center;
     background-repeat: no-repeat;
@@ -365,6 +363,22 @@ button img {
 
 .web-projects-item {
     gap: 10px;
+    justify-content: center;
+}
+
+.web-project-item {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    gap: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 0.75rem;
+    background: #ddddddbd;
+    padding: 0.75rem;
+}
+
+.web-project-item img {
+    height: 10vh;
 }
 
 #contact
