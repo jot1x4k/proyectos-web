@@ -3,6 +3,7 @@
 [![HTML](https://img.shields.io/badge/HTML-%23E34F26.svg?logo=html5&logoColor=white)](#)
 [![CSS](https://img.shields.io/badge/CSS-639?logo=css&logoColor=fff)](#)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=000)](#)
+[![pages-build-deployment](https://github.com/jot1x4k/proyectos-web/actions/workflows/pages/pages-build-deployment/badge.svg)](https://github.com/jot1x4k/proyectos-web/actions/workflows/pages/pages-build-deployment)
 
 - Juan Jose Rodriguez Prada <juanroprada@gmail.com>
 
