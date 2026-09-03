@@ -1,5 +1,10 @@
 * {
-    /* outline: 1px solid red; */
+    outline: 1px solid red;
+}
+
+html 
+{
+    scroll-behavior: smooth;
 }
 
 html,
@@ -10,6 +15,7 @@ body {
     width: 100%;
     max-width: 100%;
     overflow-wrap: break-word;
+    min-height: 100vh;
 }
 
 img {
@@ -20,6 +26,7 @@ img {
 header {
     position: sticky;
     top: 0;
+    z-index: 100;
     box-shadow: 0 2px 2px #02070c2f;
     border-radius: 0 0 1.5rem 1.5rem;
 }
@@ -43,11 +50,12 @@ header {
     color: inherit;
     font-size: 2rem;
     font-weight: 600;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.2s ease;
 }
 
 .navbar-title:hover {
     transform: scale(1.2);
+    color: #ffffff;
 }
 
 .navbar-link-container {
@@ -55,7 +63,7 @@ header {
 }
 
 .navbar-link {
-    font-family: "Commissioner", sans-serif;
+    font-family: "Cal Sans", sans-serif;
     font-weight: 500;
     text-decoration: none;
     color: #9ca397;
@@ -85,10 +93,11 @@ header {
 }
 
 main {
-    font-family: "Commissioner", sans-serif;
+    font-family:"Cal Sans", sans-serif;
 }
 
 button {
+    font-family: inherit;
     font-size: .75rem;
     font-weight: bold;
     border: none;
