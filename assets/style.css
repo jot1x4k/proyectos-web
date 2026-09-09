@@ -1,6 +1,6 @@
-* {
-    /* outline: 1px solid red; */
-}
+/* * {
+     outline: 1px solid red; 
+} */
 
 html,
 body {
@@ -379,6 +379,28 @@ button img {
 
 .web-project-item img {
     height: 10vh;
+}
+
+.web-project-item a {
+    text-decoration: none;
+    color: inherit;
+
+    button {
+        padding: 0.5rem;
+    } 
+}
+
+.web-project-button button {
+    transition: all 0.2s ease;
+}
+
+.web-project-button button:hover {
+    color: #ffffff;
+    background-color: #3b3b3b;
+}
+
+.web-project-button button:active {
+    transform: scale(0.9);
 }
 
 #contact
