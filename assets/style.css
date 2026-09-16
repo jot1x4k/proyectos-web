@@ -128,7 +128,7 @@ button {
     font-family: inherit;
     font-size: .75rem;
     font-weight: bold;
-    border: none;
+    border: 1px solid #000000;
     cursor: pointer;
     background: transparent;
     max-width: 10rem;
