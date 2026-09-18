@@ -802,8 +802,6 @@ function buscar_producto(e) {
     }
     inventarioProductos.forEach(producto => {
         if(producto.nombre.toLowerCase().includes(e.target.value.toLowerCase())) {
-            const coincideFiltro = (categoriaActual === "todos" || producto.categoria === categoriaActual);
-        if (coincideFiltro) {
             const tarjeta = document.createElement("article");
             tarjeta.classList.add("tarjeta");
 
@@ -847,8 +845,14 @@ function buscar_producto(e) {
             tarjeta.appendChild(botonComprar);
             contenedorProductos.appendChild(tarjeta);
         }
-        }
     });
 }
 
+let btn_vaciar_carrito = document.getElementById("btn-vaciar")
+
+btn_vaciar_carrito.addEventListener("click", vaciar_carrito());
+
+function vaciar_carrito(e) {
+    
+}
 
