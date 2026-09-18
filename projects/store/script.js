@@ -801,7 +801,7 @@ function buscar_producto(e) {
         contenedorProductos.firstChild.remove();
     }
     inventarioProductos.forEach(producto => {
-        if(producto.nombre.includes(e.target.value)) {
+        if(producto.nombre.toLowerCase().includes(e.target.value.toLowerCase())) {
             const coincideFiltro = (categoriaActual === "todos" || producto.categoria === categoriaActual);
         if (coincideFiltro) {
             const tarjeta = document.createElement("article");
