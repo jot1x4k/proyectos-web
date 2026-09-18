@@ -83,6 +83,21 @@
     padding: 10px;
 }
 
+.cuadro-busqueda {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin: 5px 0;
+}
+
+.cuadro-busqueda input {
+    background: var(--color-superficie);
+    outline: 2px solid var(--color-borde);
+    border-radius: 10px;
+    border: none;
+    padding: 10px;
+}
+
 .contador-cabecera { font-size: calc(var(--espaciado-base) * 0.9); }
 
 #contador-carrito {
