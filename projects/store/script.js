@@ -850,9 +850,17 @@ function buscar_producto(e) {
 
 let btn_vaciar_carrito = document.getElementById("btn-vaciar")
 
-btn_vaciar_carrito.addEventListener("click", vaciar_carrito());
+btn_vaciar_carrito.addEventListener("click", vaciar_carrito);
 
 function vaciar_carrito(e) {
-    
+    console.log("vaciar");
+    carrito.forEach(producto => {
+        if (buscarItemEnCarrito(producto.id) != null) {
+            cambiarCantidad(producto.id, +1)
+            quitarDelCarrito(producto.id)
+            renderizarCarrito();
+            renderizarProductos();
+        }
+    });
 }
 
