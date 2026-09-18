@@ -8,33 +8,26 @@
 /* =========================================================================
    1. VARIABLES Y TIPOS DE DATOS (representa la "base de datos" simulada)
    ========================================================================= */
-const manzana   = { id: 1, nombre: "manzana", categoria: "fruta",   precio: 20.5,  stock: 8,  icono: "images/manzana.jpg" };
-const pina      = { id: 2, nombre: "pina",         categoria: "fruta",   precio: 15.35, stock: 5,  icono: "images/pina.jpg" };
-const pera      = { id: 3, nombre: "pera",         categoria: "fruta",   precio: 5.45,  stock: 12, icono: "images/pera.jpg" };
-const melon     = { id: 4, nombre: "melon",        categoria: "fruta",   precio: 6.15,  stock: 3,  icono: "images/melon.jpg" };
-const zanahoria = { id: 5, nombre: "zanahoria",    categoria: "verdura", precio: 3.2,   stock: 14, icono: "images/zanahoria.jpg" };
-const tomate    = { id: 6, nombre: "tomate",       categoria: "verdura", precio: 4.75,  stock: 0,  icono: "images/tomate.jpg" };
-const jugo      = { id: 7, nombre: "jugo", categoria: "bebida",  precio: 12.0,  stock: 6,  icono: "images/jugo.jpg" };
-const cocoAgua  = { id: 8, nombre: "aguaCoco", categoria: "bebida",  precio: 8.9,   stock: 4,  icono: "images/aguaCoco.jpg" };
-const platano   = { id: 9,  nombre: "plátano",     categoria: "fruta",   precio: 18.0,  stock: 20, icono: "images/platano.jpg" };
-const uva       = { id: 10, nombre: "uva",         categoria: "fruta",   precio: 35.5,  stock: 15, icono: "images/uva.jpg" };
-const sandia    = { id: 11, nombre: "sandía",      categoria: "fruta",   precio: 25.0,  stock: 7,  icono: "images/sandia.jpg" };
-const mango     = { id: 12, nombre: "mango",       categoria: "fruta",   precio: 22.3,  stock: 10, icono: "images/mango.jpg" };
-const fresa     = { id: 13, nombre: "fresa",       categoria: "fruta",   precio: 45.0,  stock: 0,  icono: "images/fresa.jpg" };
-const lechuga   = { id: 14, nombre: "lechuga",     categoria: "verdura", precio: 12.5,  stock: 18, icono: "images/lechuga.jpg" };
-const cebolla   = { id: 15, nombre: "cebolla",     categoria: "verdura", precio: 9.8,   stock: 30, icono: "images/cebolla.jpg" };
-const pepino    = { id: 16, nombre: "pepino",      categoria: "verdura", precio: 14.2,  stock: 2,  icono: "images/pepino.jpg" };
-const brocoli   = { id: 17, nombre: "brócoli",     categoria: "verdura", precio: 19.9,  stock: 12, icono: "images/brocoli.jpg" };
-const limonada  = { id: 18, nombre: "limonada",    categoria: "bebida",  precio: 15.0,  stock: 20, icono: "images/limonada.jpg" };
-const teHelado  = { id: 19, nombre: "té helado",   categoria: "bebida",  precio: 18.5,  stock: 14, icono: "images/te.jpg" };
-const agua      = { id: 20, nombre: "agua pura",   categoria: "bebida",  precio: 10.0,  stock: 50, icono: "images/agua.jpg" };
+
+const llantaCalle = { id: 1, nombre: "Llantas de calle", categoria: "llanta", precio: 350.5, stock: 14, icono: "ruedaCalle"}
+const llantaCamion = { id: 2, nombre: "Llantas de camion", categoria: "llanta", precio: 830.5, stock: 5, icono: "ruedaCamion"}
+const llantaCompeticion = { id: 3, nombre: "Llanta de competicion", categoria: "llanta", precio: 632.5, stock: 14, icono: "ruedaCompeticion"}
+const llantaSport = { id: 4, nombre: "Llanta Sport+", categoria: "llanta", precio: 350.5, stock: 14, icono: "ruedaSport"}
+
+const cabezal = { id: 5, nombre: "Cabezal de cilindros", categoria: "motor", precio: 1200.6, stock: 4, icono: "cabezal"}
+const ciguenal = { id: 6, nombre: "Cigüeñal de aleacion", categoria: "motor", precio: 4500, stock: 15, icono: "ciguenal"}
+const embrague = { id: 7, nombre: "Kit de embrague", categoria: "motor", precio: 3200.4, stock: 32, icono: "embrague"}
+const turbo = { id: 8, nombre: "Turbocargador estandar", categoria: "motor", precio: 7699.9, stock: 13, icono: "turbo"}
+const turboVariable = { id: 9, nombre: "Turbocargador de geometria variable", categoria: "motor", precio: 13999.9, stock: 5, icono: "turboVariable"}
+
+const amplificador = { id: 10, nombre: "Amplificador para parlantes", categoria: "electronica", precio: 340.5, stock: 15, icono: "amplificador"}
+const panel = { id: 11, nombre: "Panel de instrumentos Sport+", categoria: "electronica", precio: 789.9, stock: 12, icono: "panel"}
+const radio = { id: 11, nombre: "Radio Bluetooth", categoria: "electronica", precio: 120.5, stock: 16, icono: "radio"}
 
 
 // Array que contiene todos los objetos del inventario
 const inventarioProductos = [
-    manzana, pina, pera, melon, zanahoria, tomate, jugo, cocoAgua,
-    platano, uva, sandia, mango, fresa, lechuga, cebolla, pepino, 
-    brocoli, limonada, teHelado, agua
+    llantaCalle, llantaCamion, llantaCompeticion, llantaSport, cabezal, ciguenal, embrague, turbo, turboVariable, amplificador, radio, panel
 ];
 
 // Valores fijos representados como constantes en MAYÚSCULAS aplicables para las reglas de negocio de la tienda
@@ -340,7 +333,7 @@ function renderizarProductos() {
             // Plantillas literales para armar el HTML interno de la tarjeta
             tarjeta.innerHTML = 
             `
-                <span class="icono-producto"><img src="${producto.icono}" alt="${producto.nombre}" style="width: 100%; height: auto;"></span>
+                <span class="icono-producto"><img src="assets/${producto.icono}.png" alt="${producto.nombre}" style="width: 100%; height: auto;"></span>
                 <h3 class="nombre-producto">${producto.nombre}</h3>
                 <p class="etiqueta-categoria">${producto.categoria}</p>
                 <p class="precio-producto">${formatearPrecio(producto.precio)}</p>
@@ -484,7 +477,7 @@ const renderizarCarrito = function () {
         info.innerHTML =
         `
             <p class="nombre-linea"> 
-            <img src="images/${item.nombre}.jpg" style="width: 20%; height: 100%;"> ${item.nombre}</p>
+            <img src="assets/${item.icono}.png" style="width: 20%; height: 100%;"> ${item.nombre}</p>
             <p class="detalle-linea">${item.cantidad} x ${formatearPrecio(item.precio)} = ${formatearPrecio(item.precio * item.cantidad)}</p>
         `;
 

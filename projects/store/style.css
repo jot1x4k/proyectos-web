@@ -8,9 +8,9 @@
 /* 1. TOKENS DE DISEÑO (ámbito global) --------------------------------------
    :root equivale a la etiqueta <html>: todo el documento hereda estos valores. */
 :root {
-    --color-primario: #15803d;
+    --color-primario: #152580;
     --color-texto-boton: #ffffff;
-    --color-cabecera: #166534;
+    --color-cabecera: #111e63;
     --color-texto: #1f2937;
     --color-texto-suave: #6b7280;
     --color-fondo: #f3f5f2;
@@ -39,9 +39,9 @@
    var() se repintan automáticamente.
    ------------------------------------------------------------------------- */
 .tema-oscuro {
-    --color-primario: #4ade80;
-    --color-texto-boton: #052e16; /* sobre verde claro el texto debe ser oscuro */
-    --color-cabecera: #0b2f1f;
+    --color-primario: #1f39cd;
+    --color-texto-boton: #001156; /* sobre verde claro el texto debe ser oscuro */
+    --color-cabecera: #0c143e;
     --color-texto: #e5e7eb;
     --color-texto-suave: #9ca3af;
     --color-fondo: #0f172a;
