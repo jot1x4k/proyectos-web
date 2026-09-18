@@ -793,4 +793,62 @@ function actualizarPantalla() {
         console.log(`Tienda lista con ${inventarioProductos.length} productos.`);
     })();
 
+let input = document.getElementById("input-busqueda")
+input.addEventListener("input", buscar_producto);
+
+function buscar_producto(e) {
+    while (contenedorProductos.firstChild) {
+        contenedorProductos.firstChild.remove();
+    }
+    inventarioProductos.forEach(producto => {
+        if(producto.nombre.includes(e.target.value)) {
+            const coincideFiltro = (categoriaActual === "todos" || producto.categoria === categoriaActual);
+        if (coincideFiltro) {
+            const tarjeta = document.createElement("article");
+            tarjeta.classList.add("tarjeta");
+
+            let textoStock = "";
+            if (producto.stock === 0) {
+                textoStock = "Agotado";
+                tarjeta.classList.add("agotada");
+            } else if (producto.stock <= 3) {
+                textoStock = `¡Últimas ${producto.stock} unidades!`;
+                tarjeta.classList.add("poco-stock");
+            } else {
+                textoStock = `Disponibles: ${producto.stock}`;
+            }
+
+            const itemEnCarrito = buscarItemEnCarrito(producto.id);
+            const textoEnCarrito = (itemEnCarrito === null) ? "" : `Ya llevas ${itemEnCarrito.cantidad} en el carrito`;
+
+            tarjeta.innerHTML = 
+            `
+                <span class="icono-producto"><img src="${producto.icono}" alt="${producto.nombre}" style="width: 100%; height: auto;"></span>
+                <h3 class="nombre-producto">${producto.nombre}</h3>
+                <p class="etiqueta-categoria">${producto.categoria}</p>
+                <p class="precio-producto">${formatearPrecio(producto.precio)}</p>
+                <p class="estado-stock">${textoStock}</p>
+                <p class="mini-dato">${textoEnCarrito}</p>
+            `;
+
+            const botonComprar = document.createElement("button");
+            botonComprar.classList.add("boton", "boton-bloque");
+
+            if (producto.stock === 0) {
+                botonComprar.textContent = "Sin existencias";
+                botonComprar.disabled = true;
+            } else {
+                botonComprar.textContent = "Agregar al carrito";
+                botonComprar.addEventListener("click", () => {
+                    agregarAlCarrito(producto.id);
+                });
+            }
+
+            tarjeta.appendChild(botonComprar);
+            contenedorProductos.appendChild(tarjeta);
+        }
+        }
+    });
+}
+
 
