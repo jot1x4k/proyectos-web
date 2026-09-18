@@ -814,7 +814,7 @@ function buscar_producto(e) {
 
             tarjeta.innerHTML = 
             `
-                <span class="icono-producto"><img src="${producto.icono}" alt="${producto.nombre}" style="width: 100%; height: auto;"></span>
+                <span class="icono-producto"><img src="assets/${producto.icono}.png" alt="${producto.nombre}" style="width: 100%; height: auto;"></span>
                 <h3 class="nombre-producto">${producto.nombre}</h3>
                 <p class="etiqueta-categoria">${producto.categoria}</p>
                 <p class="precio-producto">${formatearPrecio(producto.precio)}</p>
