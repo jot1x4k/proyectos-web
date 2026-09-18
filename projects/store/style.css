@@ -74,6 +74,15 @@
     gap: var(--espaciado-base);
 }
 
+.navbar-link {
+    text-decoration: none;
+    color: var(--color-texto-boton);
+    border: 1px solid var(var(--color-borde));
+    border-radius: 10px;
+    background-color: var(--color-primario);
+    padding: 10px;
+}
+
 .contador-cabecera { font-size: calc(var(--espaciado-base) * 0.9); }
 
 #contador-carrito {
